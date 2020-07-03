@@ -3,7 +3,7 @@ module.exports = {
 		browser: true,
 		es6: true,
 		jest: true,
-		node: true,
+		node: true
 	},
 	extends: ['airbnb', 'prettier'],
 	plugins: ['prettier', 'react', 'react-hooks', 'jsx-a11y', 'node', 'import'],
@@ -14,8 +14,8 @@ module.exports = {
 	parser: 'babel-eslint',
 	parserOptions: {
 		ecmaFeatures: {
-			jsx: true,
-		},
+			jsx: true
+		}
 	},
 	rules: {
 		'max-len': ['warn', 120],
@@ -43,6 +43,6 @@ module.exports = {
 		'react/jsx-indent': 'off', // check
 		'react/jsx-one-expression-per-line': 'off', // check
 		'react/prefer-stateless-function': [2],
-		'no-debugger': 'error',
-	},
+		'no-debugger': 'error'
+	}
 };
