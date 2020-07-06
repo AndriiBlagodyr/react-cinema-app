@@ -74,11 +74,6 @@
 		"prettier": "prettier \"src/**/*.{js,jsx,json}\" --write",
 		"lint": "./node_modules/.bin/eslint ./src --ext .js --ext .jsx"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged && npm run test"
-		}
-	},
 	"lint-staged": {
 		"./src/**/*.{js,jsx}": [
 			"npm run prettier",
