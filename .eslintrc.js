@@ -5,16 +5,22 @@ module.exports = {
 		jest: true,
 		node: true
 	},
-	extends: ['airbnb', 'prettier'],
+	extends: ['airbnb', 'prettier', 'node'],
 	plugins: ['prettier', 'react', 'react-hooks', 'jsx-a11y', 'node', 'import'],
-	globals: {
-		// Atomics: "readonly",
-		// SharedArrayBuffer: "readonly",
-	},
+	globals: {},
 	parser: 'babel-eslint',
 	parserOptions: {
+		ecmaVersion: 6,
+		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true
+		}
+	},
+	settings: {
+		'import/resolver': {
+			node: {
+				paths: ['src']
+			}
 		}
 	},
 	rules: {
@@ -34,14 +40,13 @@ module.exports = {
 		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
 		'no-shadow': ['warn', { builtinGlobals: false, hoist: 'functions', allow: [] }],
 		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-		//'react/jsx-props-no-spreading': 'off',
+		'import/order': [2, { groups: ['builtin', 'external'], 'newlines-between': 'always' }],
+		'react/jsx-props-no-spreading': 'off',
 		'multiline-ternary': ['error', 'never'],
 		'space-infix-ops': [2],
 		'import/prefer-default-export': 'off',
-		'import/order': [2, { groups: ['builtin', 'external'], 'newlines-between': 'always' }],
-		//'react/display-name': [2, { ignoreTranspilerName: true }],
-		'react/jsx-indent': 'off', // check
-		'react/jsx-one-expression-per-line': 'off', // check
+		'react/jsx-indent': 'off',
+		'react/jsx-one-expression-per-line': 'off',
 		'react/prefer-stateless-function': [2],
 		'no-debugger': 'error'
 	}
