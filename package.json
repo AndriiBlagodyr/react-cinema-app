@@ -26,8 +26,7 @@
 		"redux": "^4.0.5",
 		"reselect": "^4.0.0",
 		"seamless-immutable": "^7.1.4",
-		"styled-components": "^5.1.1",
-		"typescript": "^3.9.5"
+		"styled-components": "^5.1.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.10.4",
@@ -50,11 +49,9 @@
 		"cypress": "^4.9.0",
 		"eslint": "^6.0.0",
 		"eslint-config-airbnb": "^18.2.0",
-		"eslint-config-node": "^4.0.0",
 		"eslint-config-prettier": "^6.9.0",
 		"eslint-plugin-import": "^2.21.2",
 		"eslint-plugin-jsx-a11y": "^6.3.0",
-		"eslint-plugin-node": "^11.0.0",
 		"eslint-plugin-prettier": "^3.1.2",
 		"eslint-plugin-react": "^7.20.0",
 		"eslint-plugin-react-hooks": "^1.7.0",
@@ -62,17 +59,19 @@
 		"jest": "^24.9.0",
 		"jest-styled-components": "^7.0.2",
 		"lint-staged": "^10.2.11",
-		"npm-run-all": "^4.1.5",
-		"prettier": "^1.19.1",
-		"redux-devtools-extension": "^2.13.8"
+		"prettier": "^1.19.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"prettier": "prettier \"src/**/*.{js,jsx,json}\" --write",
-		"lint": "./node_modules/.bin/eslint ./src --ext .js --ext .jsx"
+		"test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+		"format": "prettier --write src/**/*.{ts,tsx,scss,css,json,js,jsx}",
+		"isready": "npm run format && npm run lint && npm run test:coverage && npm run build"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
 	},
 	"lint-staged": {
 		"./src/**/*.{js,jsx}": [

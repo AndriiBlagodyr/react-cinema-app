@@ -5,8 +5,8 @@ module.exports = {
 		jest: true,
 		node: true
 	},
-	extends: ['airbnb', 'prettier', 'node'],
-	plugins: ['prettier', 'react', 'react-hooks', 'jsx-a11y', 'node', 'import'],
+	extends: ['react-app', 'prettier'],
+	plugins: ['react', 'react-hooks', 'jsx-a11y', 'import', 'prettier'],
 	globals: {},
 	parser: 'babel-eslint',
 	parserOptions: {
@@ -29,7 +29,7 @@ module.exports = {
 		'import/prefer-default-export': 'off',
 		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
 		'react/jsx-indent': 'off',
-		'react/jsx-indent-props': 'off' // doublecheck
+		'react/jsx-indent-props': 'off',
 		'react/jsx-one-expression-per-line': 'off',
 		'react/jsx-props-no-spreading': 'off',
 		'react/prefer-stateless-function': [2],
@@ -50,6 +50,6 @@ module.exports = {
 		'no-debugger': 'error',
 		'object-shorthand': 'off',
 		'spaced-comment': 'off',
-		'space-infix-ops': [2],
+		'space-infix-ops': [2]
 	}
 };
