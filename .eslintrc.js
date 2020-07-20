@@ -3,46 +3,53 @@ module.exports = {
 		browser: true,
 		es6: true,
 		jest: true,
-		node: true,
+		node: true
 	},
-	extends: ['airbnb', 'prettier'],
-	plugins: ['prettier', 'react', 'react-hooks', 'jsx-a11y', 'node', 'import'],
-	globals: {
-		// Atomics: "readonly",
-		// SharedArrayBuffer: "readonly",
-	},
+	extends: ['react-app', 'prettier'],
+	plugins: ['react', 'react-hooks', 'jsx-a11y', 'import', 'prettier'],
+	globals: {},
 	parser: 'babel-eslint',
 	parserOptions: {
+		ecmaVersion: 6,
+		sourceType: 'module',
 		ecmaFeatures: {
-			jsx: true,
-		},
+			jsx: true
+		}
+	},
+	settings: {
+		'import/resolver': {
+			node: {
+				paths: ['src']
+			}
+		}
 	},
 	rules: {
-		'max-len': ['warn', 120],
+		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+		'import/order': [2, { groups: ['builtin', 'external'], 'newlines-between': 'always' }],
+		'import/prefer-default-export': 'off',
+		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+		'react/jsx-indent': 'off',
+		'react/jsx-indent-props': 'off',
+		'react/jsx-one-expression-per-line': 'off',
+		'react/jsx-props-no-spreading': 'off',
+		'react/prefer-stateless-function': [2],
+		'react/prop-types': 'off',
 		'prettier/prettier': 'error',
-		'spaced-comment': 'off',
-		'no-console': 'warn',
+		'class-methods-use-this': 'off',
 		'consistent-return': 'off',
 		'func-names': 'off',
-		'object-shorthand': 'off',
-		'no-process-exit': 'off',
-		'no-param-reassign': 'off',
-		'no-return-await': 'off',
-		'no-underscore-dangle': 'off',
-		'class-methods-use-this': 'off',
-		'no-unused-vars': ['warn', { argsIgnorePattern: 'req|res|next|val' }],
-		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-		'no-shadow': ['warn', { builtinGlobals: false, hoist: 'functions', allow: [] }],
-		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-		//'react/jsx-props-no-spreading': 'off',
+		'max-len': ['warn', 120],
 		'multiline-ternary': ['error', 'never'],
-		'space-infix-ops': [2],
-		'import/prefer-default-export': 'off',
-		'import/order': [2, { groups: ['builtin', 'external'], 'newlines-between': 'always' }],
-		//'react/display-name': [2, { ignoreTranspilerName: true }],
-		'react/jsx-indent': 'off', // check
-		'react/jsx-one-expression-per-line': 'off', // check
-		'react/prefer-stateless-function': [2],
+		'no-param-reassign': 'off',
+		'no-process-exit': 'off',
+		'no-return-await': 'off',
+		'no-shadow': ['warn', { builtinGlobals: false, hoist: 'functions', allow: [] }],
+		'no-underscore-dangle': 'off',
+		'no-unused-vars': ['warn', { argsIgnorePattern: 'req|res|next|val' }],
+		'no-console': 'warn',
 		'no-debugger': 'error',
-	},
+		'object-shorthand': 'off',
+		'spaced-comment': 'off',
+		'space-infix-ops': [2]
+	}
 };
