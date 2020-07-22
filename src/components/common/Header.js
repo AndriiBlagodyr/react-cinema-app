@@ -40,7 +40,7 @@ const Menu = styled.nav`
 	}
 `;
 
-const Link = ({ isActive, children, ...props }) => <ReactRouterDomLink {...props}>{children}</ReactRouterDomLink>;
+const Link = ({ children, ...props }) => <ReactRouterDomLink {...props}>{children}</ReactRouterDomLink>;
 
 const StyledLink = styled(Link)`
 	padding: 4px 8px;

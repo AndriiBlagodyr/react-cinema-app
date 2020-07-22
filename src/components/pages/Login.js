@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { PageLayout, Input, PasswordInput, Button, Spinner } from 'components/common';
 import styled from 'styled-components';
+
+import { PageLayout, Input, PasswordInput, Button, Spinner } from 'components/common';
 
 const Form = styled.form`
 	width: 100%;

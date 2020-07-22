@@ -71,6 +71,8 @@
 		"test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
 		"lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
 		"format": "prettier --write src/**/*.{ts,tsx,scss,css,json,js,jsx}",
+		"prettier:check": "prettier --check src/**/*.{ts,tsx,scss,css,json,js,jsx}",
+		"prettier:write": "prettier --write 'src/**/*.{ts,tsx,scss,css,json,js,jsx}'",
 		"isready": "npm run format && npm run lint && npm run test:coverage && npm run build"
 	},
 	"eslintConfig": {

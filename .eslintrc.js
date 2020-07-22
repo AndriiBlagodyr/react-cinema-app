@@ -39,7 +39,6 @@ module.exports = {
 		'consistent-return': 'off',
 		'func-names': 'off',
 		'max-len': ['warn', 120],
-		'multiline-ternary': ['error', 'never'],
 		'no-param-reassign': 'off',
 		'no-process-exit': 'off',
 		'no-return-await': 'off',
