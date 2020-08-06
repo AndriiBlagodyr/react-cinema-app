@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-function App() {
+export function App() {
 	const [theme, setTheme] = useState(LightTheme);
 
 	return (
