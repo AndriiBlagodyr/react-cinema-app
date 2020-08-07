@@ -5,9 +5,9 @@ import movieReducer from './movieReducer';
 import routesReducer from './routesReducer';
 
 const rootReducers = combineReducers({
-  errors: errorReducer,
-  movies: movieReducer,
-  routes: routesReducer
+	errors: errorReducer,
+	movies: movieReducer,
+	routes: routesReducer
 });
 
 export default rootReducers;

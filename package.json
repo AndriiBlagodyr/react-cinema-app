@@ -15,6 +15,7 @@
 		"immutable": "^4.0.0-rc.12",
 		"lodash": "^4.17.15",
 		"moment": "^2.24.0",
+		"node-sass": "^4.14.1",
 		"query-string": "^6.13.1",
 		"react": "^16.13.1",
 		"react-app-polyfill": "^1.0.6",
@@ -24,11 +25,11 @@
 		"react-router-dom": "5.2.0",
 		"react-scripts": "3.4.1",
 		"redux": "^4.0.5",
-		"reselect": "^4.0.0",
 		"redux-devtools-extension": "^2.13.8",
 		"redux-thunk": "^2.3.0",
-		"uuid": "^7.0.3",
-		"styled-components": "^5.1.1"
+		"reselect": "^4.0.0",
+		"styled-components": "^5.1.1",
+		"uuid": "^7.0.3"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.10.4",
